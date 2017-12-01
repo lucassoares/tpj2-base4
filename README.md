@@ -1,45 +1,19 @@
-# tpj2-base1
+# tpj2-base4
 
-Implementar _keybind_ em um jogo tosquinho.
+## Entrega [aqui](https://goo.gl/forms/G7zAUvl8nNV9aoLI2)
 
-Deverá ser possível mudar, pelo inspector da unity, as teclas de ação do player **antes** do _play_.
+Implementar _multiplayer_ em um jogo tosquinho.
 
-Todas as definições de teclas devem ficar em um único script!
+Basicamente o jogo tem que funcionar com dois players **no mesmo pc**.
+Um deles irá jogar com as setinhas e o outro, com WASD.
 
-DICA: experimenta criar funções nesse script para cada ação do player.
-
-Exemplo:
-```csharp
-public UnityEngine.KeyCode jumpKeyCode;
-
-public bool GetJump()
-{
-  return UnityEngine.Input.GetKeyDown( jumpKeyCode );
-}
-```
-
-**NÃO PRECISA MUDAR AS TECLAS ENQUANTO A UNITY TÁ EM _PLAY_!**
-
-## Controles
-
-- Mover para a direita
-- Mover para a esquerda
-- Pular
-- Abaixar
+** OBS: o código tá zuado e vocês têm que deixar bonito ;)
 
 ## Extras
 
-- Suporte a _gamepad_.
-- Mais de uma tecla pra fazer a mesma função
-  - `W` e `Espaço` fazem o personagem pular
-- **Também** usar [essa biblioteca](https://github.com/JISyed/Unity-XboxCtrlrInput) pra pegar input do controle de XBox
-  - https://github.com/JISyed/Unity-XboxCtrlrInput
-- Teclado e Gamepad funcionam juntos
-  - Tanto faz apertar `Espaço` ou o `X` do controle
-- Fazer o controle tremer quando o personagem leva hit
-  - Só da pra fazer usando bibliotecas externas de input (tipo essa de cima)
+- Fazer **todo** o código **sem** `static`
 
 ## Logística
 
 - Grupos de 2 ou 3
-- Enviar link do repositori por: https://goo.gl/forms/zkkwcGNANqPT4iLd2
+- Entrega [aqui](https://goo.gl/forms/G7zAUvl8nNV9aoLI2)
