@@ -42,7 +42,24 @@ public sealed class Enemy1 : MonoBehaviour
 				StartCoroutine( PlayerInvincibleCoroutine() );
 			}
 		}
-	}
+
+        if (collision.gameObject.CompareTag("Player2") && !Player.isInvincible)
+        {
+            Player2.lives -= 1;
+
+            if (Player2.lives == 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Player2.lives = 3;
+                Player2.score = 0;
+                Player2.isInvincible = false;
+            }
+            else
+            {
+                StartCoroutine(Player2InvincibleCoroutine());
+            }
+        }
+    }
 
 	private IEnumerator PlayerInvincibleCoroutine()
 	{
@@ -58,4 +75,19 @@ public sealed class Enemy1 : MonoBehaviour
 		Player.spriteRenderer.enabled = true;
 		Player.isInvincible = false;
 	}
+
+    private IEnumerator Player2InvincibleCoroutine()
+    {
+        Player2.isInvincible = true;
+        Camera.main.GetComponent<CameraShake>().Shake();
+
+        for (int i = 0; i < Player2.blinkCount; i++)
+        {
+            Player2.spriteRenderer.enabled = !Player2.spriteRenderer.enabled;
+            yield return new WaitForSeconds(Player2.invincibilityTime / Player2.blinkCount);
+        }
+
+        Player2.spriteRenderer.enabled = true;
+        Player2.isInvincible = false;
+    }
 }

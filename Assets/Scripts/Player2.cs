@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public sealed class Player : MonoBehaviour
+public sealed class Player2 : MonoBehaviour
 {
 	public static int score = 0;
 	public static int lives = 3;
