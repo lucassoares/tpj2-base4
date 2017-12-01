@@ -15,12 +15,12 @@ Um deles irá jogar com as setinhas e o outro, com WASD.
 - Cada player tem sua própria lógica de "invencibilidade" após perder uma vida
 - O jogo acaba caso um dos players fique sem vida
 
-## Extras (_não_ vale ponto)
+## Extras (_não_ valem ponto)
 
 - Fazer **todo** o código **sem** `static`
 - O jogo só acaba quando ambos os players ficam sem vida
 
 ## Logística
 
-- Grupos de 2 ou 3
+- Grupos de 2 a 4
 - Entrega [aqui](https://goo.gl/forms/G7zAUvl8nNV9aoLI2)
